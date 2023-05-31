@@ -2,6 +2,7 @@ package FundamentalJava.Encapsulation;
 
 public class MobileDetails
 {
+    String Username="Pavithra";
   private  String MobileName;
   private  String MobileMOdel;
   private  int Ram;

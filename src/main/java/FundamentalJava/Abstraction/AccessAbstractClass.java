@@ -2,8 +2,6 @@ package FundamentalJava.Abstraction;
 
 public class AccessAbstractClass extends ImplementsProcess
 {
-
-
     @Override
     public void noImplementMethod()
     {
@@ -15,9 +13,9 @@ public class AccessAbstractClass extends ImplementsProcess
 
     public static void main(String[] args)
     {
-        AccessAbstractClass abstraction=new AccessAbstractClass();
-        abstraction.ImplementMethod();
-        abstraction.noImplementMethod();
+//        AccessAbstractClass abstraction=new AccessAbstractClass();
+//        abstraction.ImplementMethod();
+//        abstraction.noImplementMethod();
 
     }
 }

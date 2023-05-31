@@ -8,4 +8,12 @@ public abstract class ImplementsProcess
     }
     public abstract void noImplementMethod();//no implementation method
 
+    public static void main(String[] args)
+    {
+
+//        classname obj=new Classname();
+        ImplementsProcess pro=new AccessAbstractClass();
+        pro.ImplementMethod();
+        pro.noImplementMethod();
+    }
 }
