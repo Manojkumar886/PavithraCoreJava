@@ -44,6 +44,17 @@ public class CreditCardExecution implements ZealousCreditcardMethods
                     String username= scan.next();
                     credit.UpdateCreditcardCustomerDetails(username);
                     break;
+                case 4:
+                    System.out.println("which card number you are checking");
+                    long cardnumber=scan.nextLong();
+                    credit.SearchCreditcardCustomerDetails(cardnumber);
+                    break;
+                case 6:
+                    System.out.println("which value you want delete in my object");
+                    String username1= scan.next();
+                    credit.DeleteCreditcardCustomerDetails(username1);
+                    break;
+
                 default: return;
             }
         }
@@ -105,12 +116,29 @@ public class CreditCardExecution implements ZealousCreditcardMethods
     @Override
     public long SearchCreditcardCustomerDetails(long Cardnumber)
     {
-        return 0;
+        for(int i=0;i<card.length;i++)
+        {
+            if(card[i].getCardNumber()==Cardnumber)
+            {
+                System.out.println(Cardnumber+" in this card number position founded at"+i);
+                break;
+            }
+        }
+        return Cardnumber;
     }
 
     @Override
     public String DeleteCreditcardCustomerDetails(String Cardusername)
     {
-        return null;
+        for(int i=0;i< card.length;i++)
+        {
+            if(card[i].getCardUsername().equalsIgnoreCase(Cardusername))
+            {
+                card[i]=null;
+                System.out.println(Cardusername+"your value is deleted successfully");
+                break;
+            }
+        }
+        return Cardusername+"has not deleted ";
     }
 }
