@@ -65,15 +65,32 @@ public class CreditCardExecution implements ZealousCreditcardMethods
     @Override
     public String AddCreditcardCustomerDetails(ZealousCreditCard creditdetails)
     {
-        for(int index=0;index<card.length;index++)
-        {
-            if(card[index]==null)
-            {
-                card[index]=creditdetails;
-                return creditdetails.getCardUsername()+"has been added succesfully";
-            }
-        }
-        return creditdetails.getCardUsername()+"has not been added.....!";
+        Scanner scan=new Scanner(System.in);
+
+      try
+      {
+          for(int index=0;index<card.length;index++)
+          {
+              if(card[index]==null)
+              {
+                  card[index]=creditdetails;
+                  return creditdetails.getCardUsername()+"has been added succesfully";
+              }
+          }
+          throw new ZealousException();
+      }
+      catch(ZealousException ze)
+      {
+          System.out.println(ze+"\n memory size is 3 already full....you deleted one value if you are added a new value ");
+          for(ZealousCreditCard card1:card)
+          {
+              System.out.println(card1.getCardUsername());
+          }
+          System.out.println("which value you want deleted in your memory");
+          DeleteCreditcardCustomerDetails(scan.next());
+          AddCreditcardCustomerDetails(creditdetails);
+      }
+        return creditdetails.getCardUsername()+" has been added successfully";
     }
 
     @Override

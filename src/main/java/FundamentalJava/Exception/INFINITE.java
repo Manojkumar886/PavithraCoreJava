@@ -2,7 +2,7 @@ package FundamentalJava.Exception;
 
 import java.util.Scanner;
 
-public class FiniteChances
+public class INFINITE
 {
     public void unlimitedchances()
     {
@@ -22,21 +22,12 @@ public class FiniteChances
         catch(StringIndexOutOfBoundsException siobe)
         {
             System.out.println(siobe+" your sentence lenght is "+mycontent.length()+" your ending value less then of"+mycontent.length());
-            Scanner scan=new Scanner(System.in);
-
-            System.out.println("Please enter your starting index value");
-            int start=scan.nextInt();
-
-            System.out.println("Please enter your ending index value");
-            int end=scan.nextInt();
-
-            System.out.println(mycontent.substring(start,end));
             unlimitedchances();
         }
     }
     public static void main(String[] args)
     {
-        FiniteChances finite=new FiniteChances();
+        INFINITE finite=new INFINITE();
         finite.unlimitedchances();
 //
 //       try
