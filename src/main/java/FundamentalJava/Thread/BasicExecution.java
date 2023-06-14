@@ -6,7 +6,9 @@ public class BasicExecution
     {
         Flower1 flo=new Flower1();
         flo.start();
+        System.out.println(flo.isAlive());//true
         flo.join();
+        System.out.println(flo.isAlive());//true
         Flower2 flo2=new Flower2();
 
         Thread th1=new Thread(flo2);
