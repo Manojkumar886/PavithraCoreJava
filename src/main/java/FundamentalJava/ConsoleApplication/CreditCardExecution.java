@@ -3,29 +3,16 @@ package FundamentalJava.ConsoleApplication;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class CreditCardExecution implements ZealousCreditcardMethods
+public class CreditCardExecution implements ZealousCreditcardMethods,Runnable
 {
-    ZealousCreditCard []card=new ZealousCreditCard[3];//Array Declaration(datatype [] arrayname=new datatype(classname);
-
-    public CreditCardExecution()
+    synchronized public void run()
     {
-        card[0]=new ZealousCreditCard("Pavithra",4500.34f,89796756566l,'S',2323,45000);
-        card[1]=new ZealousCreditCard("Manojkumar",4000.23f,23456786676l,'M',8989,9000);
-        card[2]=new ZealousCreditCard("annamalai",90000.3f,65687689767879l,'A',456775,156000);
-    }
-    static
-    {
-        System.out.println("welcome to Zealous CreditBank");
-    }
-
-    public static void main(String[] args)
-    {
+        System.out.println("welcome to ZealousCreditCard Bank"+Thread.currentThread().getName());
         CreditCardExecution credit=new CreditCardExecution();
-
         do
         {
             Scanner scan=new Scanner(System.in);
-            System.out.println("1.Add\n2.List\n3.Update\n4.Search\n5.Sort\n6.Delete");
+            System.out.println("1.Add\n2.List\n3.Update\n4.Search\n5.Sort\n6.Delete\n7.Exit");
             int Usage=scan.nextInt();
             switch (Usage)
             {
@@ -59,8 +46,21 @@ public class CreditCardExecution implements ZealousCreditcardMethods
             }
         }
         while (true);
-
     }
+    ZealousCreditCard []card=new ZealousCreditCard[3];//Array Declaration(datatype [] arrayname=new datatype(classname);
+
+    public CreditCardExecution()
+    {
+        card[0]=new ZealousCreditCard("Pavithra",4500.34f,89796756566l,'S',2323,45000);
+        card[1]=new ZealousCreditCard("Manojkumar",4000.23f,23456786676l,'M',8989,9000);
+        card[2]=new ZealousCreditCard("annamalai",90000.3f,65687689767879l,'A',456775,156000);
+    }
+    static
+    {
+        System.out.println("welcome to Zealous CreditBank");
+    }
+
+
 
     @Override
     public String AddCreditcardCustomerDetails(ZealousCreditCard creditdetails)
