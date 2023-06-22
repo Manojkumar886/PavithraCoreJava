@@ -8,6 +8,7 @@ public class DemoArrayListandVector
 {
     public static void main(String[] args)
     {
+
 //        List<Integer> list=new ArrayList<Integer>();
         ArrayList list1=new ArrayList();
         list1.add("Manojkumar");
