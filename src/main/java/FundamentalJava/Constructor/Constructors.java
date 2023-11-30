@@ -18,7 +18,7 @@ public class Constructors
     public static void main(String[] args)
     {
         Constructors Default=new Constructors();
-        Constructors Aruguments=new Constructors("Hairtha",20);
+        Constructors Aruguments=new Constructors("Haritha",20);
 
         new Constructors("Vaishali",21);
         new Constructors("Indhu",23);
