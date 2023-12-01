@@ -26,7 +26,6 @@ public class SelectionSort
             numbers[i]=numbers[min_index];
             numbers[min_index]=temp;
         }
-
         System.out.println("After Sorting Fruits Name :\n"+ Arrays.toString(numbers));
     }
 }
