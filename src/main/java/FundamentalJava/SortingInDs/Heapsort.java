@@ -18,7 +18,6 @@ public class Heapsort
             int temp=arr[0];
             arr[0]=arr[pos];
             arr[pos]=temp;
-
             heapify(arr,n,0);
         }
     }
