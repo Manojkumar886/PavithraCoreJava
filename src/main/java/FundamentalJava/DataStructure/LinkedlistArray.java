@@ -202,4 +202,13 @@ public class LinkedlistArray
         lla.removeAtIndex(3);
         System.out.println(Arrays.toString(lla.Listofitem));
     }
+
+    public static class LinkedListObject
+    {
+        private class Node
+        {
+            String data;
+
+        }
+    }
 }
